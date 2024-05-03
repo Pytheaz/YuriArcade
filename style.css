@@ -1,0 +1,39 @@
+html {
+    font-size: 16px;
+}
+
+header {
+    background-color: rgb(34,35,125);
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 0.625rem;
+    padding: 2rem;
+}
+
+.logo{
+    height: 3rem;
+    margin: auto;
+}
+
+.selection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.game {
+    display: block;
+    width: 300px;
+    margin: 10px;
+}
+
+.game:hover {
+    cursor: pointer;
+}
