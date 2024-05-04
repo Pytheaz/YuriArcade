@@ -25,7 +25,7 @@ function restartGame() {
     gameActive = true;
     currentPlayer = 'X';
     gameState = ["", "", "", "", "", "", "", "", ""];
-    document.getElementById('resultDisplay').innerText = "Player X's turn";
+    document.getElementById('resultDisplay').innerText = "プレイヤー X ターン"; //player turn
     cells.forEach(cell => {
         cell.innerHTML = "";
         cell.className = 'cell'; // Reset classes
@@ -76,9 +76,9 @@ function updateGameStatus() {
     if (result) {
         gameActive = false;
         if (result === 'tie') {
-            document.getElementById('resultDisplay').innerText = "Game Draw!";
+            document.getElementById('resultDisplay').innerText = "ゲーム 同点!"; //tie
         } else {
-            document.getElementById('resultDisplay').innerText = `Player ${result} Wins!`;
+            document.getElementById('resultDisplay').innerText = `プレイヤー ${result} 勝ちます!`;　//player wins
         }
     } else {
         togglePlayer();
@@ -89,7 +89,7 @@ function updateGameStatus() {
 //
 function togglePlayer() {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    document.getElementById('resultDisplay').innerText = "Player " + currentPlayer + "'s turn";
+    document.getElementById('resultDisplay').innerText = "プレイヤー " + currentPlayer + " ターン"; //player turn
 
     // note that you can change difficulty mid game!
     //

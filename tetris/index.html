@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<!--
+  LICENSE: see License
+  Commented out code are what was originally written
+-->
 <head>
-  <title>Javascript Tetris</title>
+  <title><!--Javascript Tetris11-->テトリス</title>
   <style>
-    body      { font-family: Helvetica, sans-serif; }
+    /* Original CSS */
+    @import "../style.css"; 
+    .tetris-gameboard {
+      height: 100%;
+    }
+    /* ------------ */
+    /*body      { font-family: Helvetica, sans-serif; }*/
     #tetris   { margin: 1em auto; padding: 1em; border: 4px solid black; border-radius: 10px; background-color: #F8F8F8; }
     #stats    { display: inline-block; vertical-align: top; }
     #canvas   { display: inline-block; vertical-align: top; background: url(texture.jpg); box-shadow: 10px 10px 10px #999; border: 2px solid #333; }
@@ -25,17 +35,28 @@
 </head>
 
 <body>
-
-  <div id="tetris">
-    <div id="menu">
-      <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
-      <p><canvas id="upcoming"></canvas></p>
-      <p>score <span id="score">00000</span></p>
-      <p>rows <span id="rows">0</span></p>
+  <!--------------Original------------------->
+  <header>
+    <script>
+        function homeClick(url){
+            location = url;
+        }
+    </script>
+    <img title="logo" class="logo" alt="logo" src="../logo.png" onclick="homeClick('../main.html')">
+  </header>
+  <!----------------------------------------->
+  <div class="tetris-gameboard">  <!--Added a div-->
+    <div id="tetris">
+      <div id="menu">
+        <p id="start"><a href="javascript:play();"><!--Press Space to Play.-->始めるには「Space」を押してください</a></p>
+        <p><canvas id="upcoming"></canvas></p>
+        <p><!--score-->スコア <span id="score">00000</span></p>
+        <p><!--rows-->列 <span id="rows">0</span></p>
+      </div>
+      <canvas id="canvas">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </canvas>
     </div>
-    <canvas id="canvas">
-      Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
-    </canvas>
   </div>
 
   <script src="stats.js"></script>
@@ -445,5 +466,10 @@
 
   </script>
 
+  <!--------------Original------------------->
+  <footer>
+    Copyright © 2011, 2012, 2013, 2014, 2015, 2016 Jake Gordon and contributors
+  </footer>
+  <!----------------------------------------->
 </body>
 </html>

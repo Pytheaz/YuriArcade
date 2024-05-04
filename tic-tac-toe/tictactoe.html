@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+<!--
+  LICENSE: Game Arcade
+  Commented out code are what was originally written
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe - Game Arcade</title>
+    <title><!--Tic Tac Toe - Game Arcade-->三目並べ</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tictactoe.css">
 </head>
 <body>
+    <!--------------Original------------------->
+    <header>
+        <script>
+            function homeClick(url){
+                location = url;
+            }
+        </script>
+        <img title="logo" class="logo" alt="logo" src="../logo.png" onclick="homeClick('../main.html')">
+    </header>
+    <!----------------------------------------->
+    <!--
     <header>
         <h1><a href="index.html">Game Arcade</a></h1>
     </header>
+    -->
 
     <div id="gameContainer" class="game-play-area">
+        <!--
         <h2>Tic Tac Toe</h2>
+        -->
         <div id="difficultySelection">
-            <label>Difficulty:</label>
-            <input type="radio" name="difficulty" id="easy" value="easy"> Easy
-            <input type="radio" name="difficulty" id="medium" value="medium" checked> Medium
-            <input type="radio" name="difficulty" id="hard" value="hard"> Hard
+            <label><!--Difficulty-->難易:</label>
+            <input type="radio" name="difficulty" id="easy" value="easy"> <!--Easy-->簡単
+            <input type="radio" name="difficulty" id="medium" value="medium" checked> <!--Medium-->中
+            <input type="radio" name="difficulty" id="hard" value="hard"> <!--Hard-->難しい
         </div>
         <div id="gameBoard" class="board">
             <!-- Creating 9 cells for the Tic Tac Toe grid -->
@@ -32,13 +50,19 @@
             <button class="cell" data-cell-index="7"></button>
             <button class="cell" data-cell-index="8"></button>
         </div>
-        <div id="resultDisplay">Player X's turn</div>
-        <button id="restartButton" onclick="restartGame()">Restart Game</button>
+        <div id="resultDisplay">プレイヤー X ターン</div>
+        <button id="restartButton" onclick="restartGame()"><!--Restart Game-->リスタート</button>
     </div>
-
+    <!--
     <footer>
         <p>Copyright &copy; 2024 Game Arcade</p>
     </footer>
+    -->
+    <!--------------Original------------------->
+    <footer>
+        Copyright © 2024 Game Arcade
+    </footer>
+    <!----------------------------------------->
 
     <script src="tictactoe.js"></script>
 </body>

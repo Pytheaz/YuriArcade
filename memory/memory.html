@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Rock Paper Scissors　-->
+    <title>じゃんけんぽん</title>  
+    <link rel="stylesheet" type="text/css" href="memory.css">
+</head>
+<body>
+    <header>
+        <script>
+            function homeClick(url){
+                location = url;
+            }
+        </script>
+        <img title="logo" class="logo" alt="logo" src="../logo.png" onclick="homeClick('../main.html')">
+    </header>
+    <div class="memory-gameboard">
+        <div class="score">
+            ペア: <span id="score">0</span>
+        </div>
+        <div id="memGame" class="board">
+            <!-- Creating 20 cells for memory game -->
+            <button class="cell" data-cell-index="0"></button>
+            <button class="cell" data-cell-index="1"></button>
+            <button class="cell" data-cell-index="2"></button>
+            <button class="cell" data-cell-index="3"></button>
+            <button class="cell" data-cell-index="4"></button>
+            <button class="cell" data-cell-index="5"></button>
+            <button class="cell" data-cell-index="6"></button>
+            <button class="cell" data-cell-index="7"></button>
+            <button class="cell" data-cell-index="8"></button>
+            <button class="cell" data-cell-index="9"></button>
+            <button class="cell" data-cell-index="10"></button>
+            <button class="cell" data-cell-index="11"></button>
+            <button class="cell" data-cell-index="12"></button>
+            <button class="cell" data-cell-index="13"></button>
+            <button class="cell" data-cell-index="14"></button>
+            <button class="cell" data-cell-index="15"></button>
+            <button class="cell" data-cell-index="16"></button>
+            <button class="cell" data-cell-index="17"></button>
+            <button class="cell" data-cell-index="18"></button>
+            <button class="cell" data-cell-index="19"></button>
+        </div>
+        <button id="restart" onclick="restartGame()">リスタート</button>
+        </div>
+    </div>
+    <footer>
+        Copyright © 2024 Yuri Arcade
+    </footer>
+    <script src="memory.js"></script>
+</body>
+</html>
