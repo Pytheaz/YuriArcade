@@ -12,6 +12,12 @@ footer {
     text-align: center;
     margin-top: 0.625rem;
     padding: 2rem;
+    bottom: 0;
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    background-color: rgb(34,35,125);
+    color: white;
 }
 
 .logo{
@@ -19,10 +25,15 @@ footer {
     margin: auto;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .selection {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;

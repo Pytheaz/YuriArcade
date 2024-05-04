@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Rock Paper Scissors　-->
+    <title>じゃんけんぽん</title>  
+    <link rel="stylesheet" type="text/css" href="rps.css">
+</head>
+<body>
+    <header>
+        <script>
+            function homeClick(url){
+                location = url;
+            }
+        </script>
+        <img title="logo" class="logo" alt="logo" src="../logo.png" onclick="homeClick('../main.html')">
+    </header>
+    <div class="rps-gameboard">
+        <div class="score-container">
+            <div class="choice-img"> 
+			    <img class="rps-img" src="res/rock.png" alt="rock" id="pChoice">
+            </div>
+            <div class="score">
+                <div id="player" class="label">自分</div>
+                <div id="cpu" class="label">CPU</div>
+                <span id="p-score">0</span>|<span id="cpu-score">0</span>
+            </div>
+            <div class="choice-img">
+                <img class="rps-img" src="res/rock.png" alt="rock" id="cpuChoice">
+            </div>
+        </div>
+        <div class="result">
+            <p id="result"></p>
+        </div>
+        <div class="selections">
+            <div class="select-op choose" id="rock" tabindex="0">
+                <img class="rps-img" src="res/rock.png" alt="rock">
+            </div>
+            <div class="select-op choose" id="paper" tabindex="0">
+                <img class="rps-img" src="res/paper.png" alt="paper">
+            </div>
+            <div class="select-op choose" id="scissors"  tabindex="0">
+                <img class="rps-img" src="res/scissors.png" alt="scissors">
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright © 2024 Yuri Arcade
+    </footer>
+    <script src="rps.js"></script>
+</body>
+</html>
