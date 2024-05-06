@@ -66,7 +66,9 @@ function restartGame() {
     round = true;
     score.innerText = pairs;
     cells.forEach(cell => {
-        cell.img.remove();
+        if(cell.firstElementChild){
+            cell.firstElementChild.remove();
+         }
         cell.className = 'cell'; // Reset cells
     });
     shuffleCards();
@@ -84,7 +86,7 @@ function cellPlayed(clickedCell, cellIndex) {
     clickedCell.append(addImg);
 }
 
-function cellClick(clickedEvent) {
+async function cellClick(clickedEvent) {
     const clicked = clickedEvent.target;
     const cellIndex = parseInt(clicked.getAttribute('data-cell-index'));
     if (board[cellIndex] !== "" || !active) {
@@ -94,17 +96,18 @@ function cellClick(clickedEvent) {
     if(cardNum===1){
         index1 = cellIndex;
         cellPlayed(clicked, cellIndex);
-        cell1 = clicked.getElementById("emote");
+        cell1 = clicked.firstElementChild;
         cardNum = 2;
     }
     else if(cardNum===2){
         index2 = cellIndex;
         cellPlayed(clicked, cellIndex);
-        cell2 = clicked.getElementById("emote");
+        cell2 = clicked.firstElementChild;
         round = false;
         cardNum = 1;
     }
-    gameStatus();
+
+    setTimeout(gameStatus, 500);
 }
 
 function gameStatus() {
@@ -114,7 +117,6 @@ function gameStatus() {
         index2 = -1;
         round = true;
     }
-
 }
 
 function checkPair(){
