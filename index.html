@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Yuri Arcade　-->
+    <title>ユリアーケード</title>  
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <script>
+            function homeClick(url){
+                location = url;
+            }
+        </script>
+        <img title="logo" class="logo" alt="logo" src="logo.png" onclick="homeClick('index.html')">
+    </header>
+    <div class="selection">
+        <!-- Rock Paper Scissors　-->
+        <button class="game" onclick="location.href='rps/rps.html';">じゃんけんぽん</button>
+        <!-- Memory　-->
+        <button class="game" onclick="location.href='memory/memory.html';">神経衰弱</button>
+        <!-- Tic-Tac-Toe　-->
+        <button class="game" onclick="location.href='tic-tac-toe/tictactoe.html';">三目並べ</button>
+        <!-- Tetris　-->
+        <button class="game" onclick="location.href='tetris/tetris.html';">テトリス</button>
+    </div>
+    <footer>
+        Copyright © 2024 Yuri Arcade
+    </footer>
+</body>
+</html>
